@@ -3,18 +3,18 @@ public class BubbleSort {
     /** Sorts the first n objects in an array into ascending order.
      * This initial method is a wrapper for the actual BubbleSort method.
      * @param arr An array of Comparable objects.
-     * @param n An integer > 0.
+     * @param length An integer > 0.
      */
     public static <T extends Comparable<? super T>>
     void bubbleSort(T[] arr, int length)
     {
-        // Invoke the shellSort algorithm:
+        // Invoke the bubbleSort algorithm:
         bubbleSort(arr, 0,length-1);
     }
 
 
     /** Sorts the first n objects in an array into ascending order.
-     * Use bubble sort with to
+     * Using bubble sort technique.
      * sort a range of values in the array.
      * @param arr An array of Comparable objects.
      * @param first An integer >= 0.
@@ -42,7 +42,6 @@ public class BubbleSort {
                     arr[(j + 1)] = arr[j];
                     arr[j] = temp;
                 }
-                //ArrayMaker.displayArrayContent(arr);
             }
         }
         long memory = runtime.totalMemory() - runtime.freeMemory();

@@ -1,11 +1,5 @@
 import java.util.Random;
 
-/**
- * Lab Session C (based on source code by Charles Hoot)
- * ArrayUtil Class used to provide some utility methods
- * for the array sorting algorithms
- */
-
 public class ArrayMaker {
 
     /**
@@ -59,7 +53,7 @@ public class ArrayMaker {
      * Method to return a random float between 0 and maxVal.
      * @return  A random Float.
      */
-    private static Float generateRandomFloat(){
+    private static float generateRandomFloat(){
         Random rand = new Random();
         return rand.nextFloat();
     }
@@ -93,6 +87,36 @@ public class ArrayMaker {
 
         for (int i = 0; i < size; i++) {
             resultArray[i] = (Integer) orig[i];
+        }
+        return resultArray;
+    }
+
+    /**
+     * Method to duplicate the String content of an array.
+     * @param  orig The source array to copy.
+     * @return The String array containing a copy of the values in the source array.
+     */
+    public static String[] duplicateArrayString(Object [] orig) {
+        int size = orig.length;
+        String resultArray[] = new String[size];
+
+        for (int i = 0; i < size; i++) {
+            resultArray[i] = (String) orig[i];
+        }
+        return resultArray;
+    }
+
+    /**
+     * Method to duplicate the Float content of an array.
+     * @param  orig The source array to copy.
+     * @return The Float array containing a copy of the values in the source array.
+     */
+    public static Float[] duplicateArrayFloat(Object [] orig) {
+        int size = orig.length;
+        Float resultArray[] = new Float[size];
+
+        for (int i = 0; i < size; i++) {
+            resultArray[i] = (Float) orig[i];
         }
         return resultArray;
     }

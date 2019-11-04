@@ -27,8 +27,7 @@ public class ShellSort {
         int n = last - first + 1;
         int count = 2;
 
-        // TODO: Determine the interval (gap/space) to use.
-        // TODO: For this example the interval should be half of the size of the array:
+        // create the interval for sub arrays to be created.
         int interval = n/2;
         long memory;
 
@@ -66,7 +65,7 @@ public class ShellSort {
     private static <T extends Comparable<? super T>>
     int incrementalInsertionSort(T[] arr, int first, int last, int interval) {
         int unsorted, index;
-        int count = 0;
+        int count = 0;  // counts operations
 
         //Loop through the array, insert each unsorted item in order:
         for (unsorted = first + interval; unsorted <= last; unsorted = unsorted + interval) {
@@ -82,10 +81,8 @@ public class ShellSort {
             while ((index >= first) && (nextToInsert.compareTo(arr[index]) == -1)){
                 // Shift (make room) to the right of the current index + interval for the current item:
                 arr[index + interval] = arr[index];
-
-                // Decrement the index by the interval:
                 index = index - interval;
-                count++;
+                count++;    // counts operations
             }
 
             // Insert the entry into the array:

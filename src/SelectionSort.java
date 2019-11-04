@@ -1,14 +1,5 @@
-/**
- * Lab Session C (based on source code by Charles Hoot)
- * Class for sorting an array of Comparable objects from smallest to
- * largest using the Selection Sort algorithm.
- */
 
 public class SelectionSort {
-
-    /**************************************************************
-     * ITERATIVE SELECTION SORT
-     **************************************************************/
 
     /**
      * Sorts the first n objects in an array into ascending order.
@@ -59,7 +50,6 @@ public class SelectionSort {
      * @param last  An integer >= 0 and < arr.length that is the index of the last
      *              array entry to consider.
      * @return The index of the smallest value among
-     * arr[first], arr[first+1], . . . , arr[last].
      */
     private static <T extends Comparable<? super T>>
     int getIndexOfSmallest(T[] arr, int first, int last) {
@@ -73,8 +63,6 @@ public class SelectionSort {
         //Loop through the remainder of the array:
         for (int index = first + 1; index <= last; index++) {
             // Compare the value at arr[index] with the current smallest value.
-            // If its less, then set the current smallest value to arr[index]
-            // and set the index of the current smallest value to index.
             if (arr[index].compareTo(minVal) < 0) {
                 minVal = arr[index];
                 indexMin = index;
