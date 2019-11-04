@@ -1,6 +1,6 @@
 
 public class SelectionSort {
-
+    public static int count = 0;
     /**
      * Sorts the first n objects in an array into ascending order.
      * This initial method is a wrapper for the actual selectionSort method.
@@ -23,7 +23,6 @@ public class SelectionSort {
      */
     private static <T extends Comparable<? super T>>
     void selectionSort(T[] arr, int first, int last) {
-        int count = 0;
         long memory;
         //find memory usage using Runtime util
         Runtime runtime = Runtime.getRuntime();
@@ -66,6 +65,7 @@ public class SelectionSort {
             if (arr[index].compareTo(minVal) < 0) {
                 minVal = arr[index];
                 indexMin = index;
+                count++;
             }
         }
         return indexMin;

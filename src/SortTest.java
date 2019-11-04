@@ -39,60 +39,62 @@ public class SortTest {
         Float[] dataFloatBubbleSort = ArrayMaker.duplicateArrayFloat(testFloatArray);
 
 
-
-        System.out.println("The unsorted array is: ");
+        // Test Integer Array:
+        System.out.println("The unsorted Integer array is: ");
         ArrayMaker.displayArrayContent(testArray);
         System.out.println("-------------------------------------------------------------------------------");
 
-        // Test shell sort, and get metrics
+        // Test shell sort, and get metrics:
         System.out.println();
         System.out.println("Sorting using Shell Sort: ");
         startTimeShell = System.nanoTime();
         ShellSort.shellSort(dataShellSort, arraySize);
         endTimeShell = System.nanoTime();
-        durationShell = TimeUnit.NANOSECONDS.toMillis(endTimeShell - startTimeShell); // time to execute in miliseconds
+        durationShell = TimeUnit.NANOSECONDS.toMillis(endTimeShell - startTimeShell); // time to execute in milliseconds
         System.out.println("\nThe Shell sort, sorted array is: ");
         ArrayMaker.displayArrayContent(dataShellSort);
-        System.out.println("Time to complete: " + durationShell + " miliseconds.");
+        System.out.println("Time to complete: " + durationShell + " milliseconds.");
         System.out.println("-------------------------------------------------------------------------------");
 
-        // Test Bubble sort, and get metrics
+        // Test Bubble sort, and get metrics:
         System.out.println();
         System.out.println("Sorting using Bubble Sort: ");
         startTimeBubble = System.nanoTime();
         BubbleSort.bubbleSort(dataBubbleSort,arraySize);
         endTimeBubble = System.nanoTime();
-        durationBubble = TimeUnit.NANOSECONDS.toMillis(endTimeBubble - startTimeBubble); // time to execute in miliseconds
+        durationBubble = TimeUnit.NANOSECONDS.toMillis(endTimeBubble - startTimeBubble); // time to execute in milliseconds
         System.out.println("\nThe Bubble sort, sorted array is: ");
         ArrayMaker.displayArrayContent(dataShellSort);
-        System.out.println("Time to complete: " + durationBubble + " miliseconds.");
+        System.out.println("Time to complete: " + durationBubble + " milliseconds.");
         System.out.println("-------------------------------------------------------------------------------");
 
-        // Test Bubble sort, and get metrics
+        // Test Bubble sort, and get metrics:
         System.out.println();
         System.out.println("Sorting using Selection Sort: ");
         startTimeSelect = System.nanoTime();
         BubbleSort.bubbleSort(dataSelectSort,arraySize);
         endTimeSelect= System.nanoTime();
-        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in miliseconds
+        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in milliseconds
         System.out.println("\nThe Selection sort, sorted array is: ");
         ArrayMaker.displayArrayContent(dataSelectSort);
-        System.out.println("Time to complete: " + durationSelect + " miliseconds.");
+        System.out.println("Time to complete: " + durationSelect + " milliseconds.");
         System.out.println("-------------------------------------------------------------------------------");
 
+        // Test String arrays:
         System.out.println("Unsorted String Array:");
         ArrayMaker.displayArrayContent(testStringArray);
+        System.out.println("-------------------------------------------------------------------------------");
 
-        // Test Bubble sort (String) and get metrics
+        // Test Bubble sort (String) and get metrics:
         System.out.println();
         System.out.println("Sorting using Bubble Sort: ");
         startTimeSelect = System.nanoTime();
         BubbleSort.bubbleSort(dataStringBubbleSort,arraySize);
         endTimeSelect= System.nanoTime();
-        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in miliseconds
+        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in milliseconds
         System.out.println("\nThe Bubble sort, sorted array is: ");
         ArrayMaker.displayArrayContent(dataStringBubbleSort);
-        System.out.println("Time to complete: " + durationSelect + " miliseconds.");
+        System.out.println("Time to complete: " + durationSelect + " milliseconds.");
         System.out.println("-------------------------------------------------------------------------------");
 
         // Test Selection sort (String) and get metrics
@@ -101,13 +103,13 @@ public class SortTest {
         startTimeSelect = System.nanoTime();
         SelectionSort.selectionSort(dataStringSelectSort,arraySize);
         endTimeSelect= System.nanoTime();
-        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in miliseconds
+        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in milliseconds
         System.out.println("\nThe Selection sort, sorted array is: ");
         ArrayMaker.displayArrayContent(dataStringSelectSort);
-        System.out.println("Time to complete: " + durationSelect + " miliseconds.");
+        System.out.println("Time to complete: " + durationSelect + " milliseconds.");
         System.out.println("-------------------------------------------------------------------------------");
 
-        // Test Shell sort (String) and get metrics
+        // Test Shell sort (String) and get metrics:
         System.out.println();
         System.out.println("Sorting using Shell Sort: ");
         startTimeSelect = System.nanoTime();
@@ -116,43 +118,48 @@ public class SortTest {
         durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in miliseconds
         System.out.println("\nThe Shell sort, sorted array is: ");
         ArrayMaker.displayArrayContent(dataStringShellSort);
-        System.out.println("Time to complete: " + durationSelect + " miliseconds.");
+        System.out.println("Time to complete: " + durationSelect + " milliseconds.");
         System.out.println("-------------------------------------------------------------------------------");
 
-        // Test Bubble sort (Float) and get metrics
+        // Test float arrays:
+        System.out.println("The unsorted Float array is: ");
+        ArrayMaker.displayArrayContent(testFloatArray);
+        System.out.println("-------------------------------------------------------------------------------");
+
+        // Test Bubble sort (Float) and get metrics:
         System.out.println();
         System.out.println("Sorting using Bubble Sort: ");
         startTimeSelect = System.nanoTime();
         BubbleSort.bubbleSort(dataFloatBubbleSort,arraySize);
         endTimeSelect= System.nanoTime();
-        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in miliseconds
+        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in milliseconds
         System.out.println("\nThe Selection sort, sorted array is: ");
         ArrayMaker.displayArrayContent(dataFloatBubbleSort);
-        System.out.println("Time to complete: " + durationSelect + " miliseconds.");
+        System.out.println("Time to complete: " + durationSelect + " milliseconds.");
         System.out.println("-------------------------------------------------------------------------------");
 
-        // Test Selection sort (Float) and get metrics
+        // Test Selection sort (Float) and get metrics:
         System.out.println();
         System.out.println("Sorting using Selection Sort: ");
         startTimeSelect = System.nanoTime();
         SelectionSort.selectionSort(dataFloatSelectSort,arraySize);
         endTimeSelect= System.nanoTime();
-        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in miliseconds
+        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in milliseconds
         System.out.println("\nThe Selection sort, sorted array is: ");
         ArrayMaker.displayArrayContent(dataFloatSelectSort);
-        System.out.println("Time to complete: " + durationSelect + " miliseconds.");
+        System.out.println("Time to complete: " + durationSelect + " milliseconds.");
         System.out.println("-------------------------------------------------------------------------------");
 
-        // Test Selection sort (Float) and get metrics
+        // Test Selection sort (Float) and get metrics:
         System.out.println();
         System.out.println("Sorting using Shell Sort: ");
         startTimeSelect = System.nanoTime();
         ShellSort.shellSort(dataFloatShellSort,arraySize);
         endTimeSelect= System.nanoTime();
-        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in miliseconds
+        durationSelect = TimeUnit.NANOSECONDS.toMillis(endTimeSelect - startTimeSelect); // time to execute in milliseconds
         System.out.println("\nThe Shell sort, sorted array is: ");
         ArrayMaker.displayArrayContent(dataFloatShellSort);
-        System.out.println("Time to complete: " + durationSelect + " miliseconds.");
+        System.out.println("Time to complete: " + durationSelect + " milliseconds.");
         System.out.println("-------------------------------------------------------------------------------");
 
     }
