@@ -1,3 +1,8 @@
+/**
+ * CW1 COM498.
+ * John Lee O'Connell
+ * B00757542
+ */
 
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;

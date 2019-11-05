@@ -1,3 +1,9 @@
+/**
+ * CW1 COM498.
+ * John Lee O'Connell
+ * B00757542
+ */
+
 public class BubbleSort {
 
     /** Sorts the first n objects in an array into ascending order.

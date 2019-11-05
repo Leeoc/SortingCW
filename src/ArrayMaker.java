@@ -1,3 +1,9 @@
+/**
+ * CW1 COM498.
+ * John Lee O'Connell
+ * B00757542
+ */
+
 import java.util.Random;
 
 public class ArrayMaker {

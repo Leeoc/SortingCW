@@ -1,3 +1,8 @@
+/**
+ * CW1 COM498.
+ * John Lee O'Connell
+ * B00757542
+ */
 
 public class SelectionSort {
     public static int count = 0;
